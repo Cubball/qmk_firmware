@@ -29,20 +29,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+------------+------------+------------+------------+-----|                    |-----+------------+------------+------------+---------------+--------|
                                            KC_ESC, LT(2, KC_ENT), LT(1, KC_SPC),     LT(3, KC_BSPC), KC_TAB, KC_DEL
                                         //`------------------------------------'    `------------------------------'
-
   ),
 
+  // symbols layer does not include home row mods, because it is not possible to send shifted keys with them
+  // might redo the layer to not have shifted keys in the home row
+  // or just stick to it and hold shift to type them
     [1] = LAYOUT_split_3x6_3(
-  //,-------------------------------------------------------------------------------.                 ,--------------------------------------------------------------------------------.
-      XXXXXXX,     KC_BSLS,         KC_UNDS,         KC_SPC,        XXXXXXX, KC_SLSH,                   KC_CIRC,        KC_LBRC,        KC_RBRC,        KC_ENT,        XXXXXXX, XXXXXXX,
-  //|--------+-------------+---------------+---------------+---------------+--------|                 |--------+---------------+---------------+--------------+---------------+--------|
-      XXXXXXX, GUI_T(KC_AT), ALT_T(KC_MINS), SFT_T(KC_LPRN), CTL_T(KC_RPRN), KC_EXLM,                   KC_ASTR, CTL_T(KC_LCBR), SFT_T(KC_RCBR), ALT_T(KC_EQL), GUI_T(KC_PLUS), XXXXXXX,
-  //|--------+-------------+---------------+---------------+---------------+--------|                 |--------+---------------+---------------+--------------+---------------+--------|
-      XXXXXXX,      KC_PIPE,        KC_AMPR,        KC_QUOT,        KC_DQUO,  KC_DLR,                   KC_PERC,        KC_HASH,         KC_GRV,       KC_QUES,        XXXXXXX, XXXXXXX,
-  //|--------+-------------+--------------+----------------+---------------+--------|                 |--------+---------------+---------------+--------------+---------------+--------|
-                                                                XXXXXXX, XXXXXXX, _______,        KC_BSPC, _______, _______
-                                                             //`-------------------------'       `-------------------------'
-
+  //,-----------------------------------------------------.                         ,-----------------------------------------------------.
+      XXXXXXX, KC_BSLS, KC_UNDS,  KC_SPC, XXXXXXX, KC_SLSH,                           KC_CIRC, KC_LBRC, KC_RBRC,  KC_ENT, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                         |--------+--------+--------+--------+--------+--------|
+      XXXXXXX,   KC_AT, KC_MINS, KC_LPRN, KC_RPRN, KC_EXLM,                           KC_ASTR, KC_LCBR, KC_RCBR,  KC_EQL, KC_PLUS, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                         |--------+--------+--------+--------+--------+--------|
+      XXXXXXX, KC_PIPE, KC_AMPR, KC_QUOT, KC_DQUO,  KC_DLR,                           KC_PERC, KC_HASH,  KC_GRV, KC_QUES, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                         |--------+--------+--------+--------+--------+--------|
+                                         XXXXXXX, XXXXXXX, _______,         KC_BSPC, _______, _______
+                                       //`-------------------------'       `-------------------------'
   ),
 
     [2] = LAYOUT_split_3x6_3(
