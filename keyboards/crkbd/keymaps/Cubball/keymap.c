@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // or just stick to it and hold shift to type them
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                         ,-----------------------------------------------------.
-      _______, KC_BSLS, KC_UNDS,  KC_SPC, XXXXXXX, KC_SLSH,                           KC_CIRC, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, _______,
+      _______, KC_BSLS, KC_UNDS,  KC_SPC,  KC_DEL, KC_SLSH,                           KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------|                         |--------+--------+--------+--------+--------+--------|
       _______,   KC_AT, KC_MINS, KC_LPRN, KC_RPRN, KC_EXLM,                           KC_ASTR, KC_LCBR, KC_RCBR,  KC_EQL, KC_PLUS, _______,
   //|--------+--------+--------+--------+--------+--------|                         |--------+--------+--------+--------+--------+--------|
